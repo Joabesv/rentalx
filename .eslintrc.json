@@ -41,7 +41,8 @@
       "error",
       "ignorePackages",
       {
-        "ts": "never"
+        "ts": "never",
+        "js": "never"
       }
     ],
     "import-helpers/order-imports": [
@@ -56,11 +57,12 @@
       "error",
       { "devDependencies": ["**/*.spec.js"] }
     ],
-    "settings": {
-      "import/resolver": {
-        "typescript": {}
-      }
-    },
+
     "prettier/prettier": "error"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
   }
 }
