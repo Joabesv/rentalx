@@ -7,5 +7,43 @@
     "contact": {
       "email": "joabevarjao123@gmail.com"
     }
+  },
+  "paths": {
+    "/categories": {
+      "post": {
+        "tags": ["Category"],
+        "summary": "Criando uma categoria",
+        "description": "Criar uma nova categoria",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "name": "Exemplo de categoria",
+                  "description": "Exemplo de descrição de categoria"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Category already exists!"
+          }
+        }
+      }
+    }
   }
 }
